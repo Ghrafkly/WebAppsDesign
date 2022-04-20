@@ -1,0 +1,36 @@
+body {
+    background-color: aliceblue;
+}
+
+h1, h2 {
+    text-align: center;
+    outline: 5px solid black;
+}
+
+div {
+    padding: 15px;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    outline: 2px solid blue;
+}
+
+.row {
+    outline: 2px solid red
+}
+
+#div1 {
+    width: 20%;
+}
+
+#div2 {
+    width: 80%;
+}
+
+a {
+    line-height: 5;
+    text-align: center;
+    display: block;
+}

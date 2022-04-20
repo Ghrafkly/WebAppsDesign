@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#main-heading {
+    text-align: center;
+    background-color: lightcoral;
+    padding: 15px;
+    grid-column: span 12;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+}
+
+.itemList {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.itemList > div:nth-child(1) {
+    border-right: 1px solid black;
+}
+
+ul {
+    list-style: none;
+    padding-right: 5em;
+    padding-left: 5em;
+}
+
+ul > li {
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(207, 227, 245);
+    border-top: 1px solid
+}
+
+button {
+    float: right;
+    margin-right: 5px;
+    border: none;
+}
+
+button:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+}
+
+.cart {
+    grid-column: 4 / 10;
+    padding: 20px;
+    background-color: lightgray;
+}
+
+.cart > div {
+    background-color: green;
+    padding: 10px;
+}

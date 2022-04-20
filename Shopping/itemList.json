@@ -1,0 +1,37 @@
+{
+    "Fruit": [
+        {
+            "name": "Apples",
+            "price": 2.3,
+            "quantity": 10
+        },
+        {
+            "name": "Bananas",
+            "price": 5.0,
+            "quantity": 7
+        },
+        {
+            "name": "Pears",
+            "price": 3.6,
+            "quantity": 5
+        }
+    ],
+    "Drinks": [
+        {
+            "name": "Coffee",
+            "price": 2.7,
+            "quantity": 100
+        },
+        {
+            "name": "Tea",
+            "price": 2.0,
+            "quantity": 67
+        },
+        {
+            "name": "Water",
+            "price": 1.7,
+            "quantity": 1980
+        }
+    ]
+    
+}

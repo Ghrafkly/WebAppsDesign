@@ -1,0 +1,36 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+div {
+    text-align: center;
+    padding: 5px;
+    outline: 2px solid blue;
+}
+
+#item12 {
+    grid-column: span 12;
+}
+
+#item10 {
+    grid-column: span 10;
+}
+
+#item6 {
+    grid-column: span 6;
+}
+
+#item4 {
+    grid-column: span 4;
+}
+
+#item3 {
+    grid-column: span 3;
+}
+
+#item2 {
+    grid-column: span 2;
+}
