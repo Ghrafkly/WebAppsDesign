@@ -29,50 +29,25 @@ function testPrint(data) {
     )
 }
 
-function addItemToCart() {
-    console.log("Hello");
-}
-
 function printItem(cat,items) {
     const newDiv = document.createElement("div")
-    var str = `<div><h2>${cat}</h2><ul>`
+    var str = `<div><h2>${cat}</h2><ul>`;
 
     items.forEach((item, idx) => {
         str += `
-        <li id="no${idx}">
+        <li id="${item.name}">
             $${(item.price).toFixed(2)}  ${item.name}
-            <button onclick="console.log(${item.name})">&#x2713</button>
+            <button onclick="addItemToCart('${item.name}')">&#x2713</button>
             <button>&#x2715</button>
         </li>`
     });
 
-// <button onclick="console.log(document.querySelector('#no${idx}').innerHTML)">&#x2713</button>
-// <button onclick="console.log(document.querySelector(#${idx}).innerHTML)">&#x2713</button>
+    
+    str += `</ul></div>`;
+    newDiv.innerHTML = str;
+    main.append(newDiv);
+};
 
-    str += `</ul></div>`
-    newDiv.innerHTML = str
-    main.append(newDiv)
+function addItemToCart(item) {
+    console.log(item);
 }
-
-
-// function addItemToCart(index) {
-//     console.log(item);
-// }
-
-// function printItem(cat,items) {
-//     const newDiv = document.createElement("div")
-//     var str = `<div><h2>${cat}</h2><ul>`
-
-//     items.forEach((item, index) => {
-//         str += `
-//         <li>
-//             $${(item.price).toFixed(2)}  ${item.name}
-//             <button onclick="addItemToCart(${index})">&#x2713</button>
-//             <button>&#x2715</button>
-//         </li>`
-//     });
-
-//     str += `</ul></div>`
-//     newDiv.innerHTML = str
-//     main.append(newDiv)
-// }
