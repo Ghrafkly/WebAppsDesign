@@ -38,13 +38,7 @@ function printItem(cat,items) {
     if (cat != "MISC") {
         items.forEach(item => {
             const meti = JSON.stringify(item)
-            str += `
-            <li id="${item.name}">
-                <p id="price">$${item.price}</p>
-                <p id="name" >${item.name}</p>
-                <p id="quantity">${item.quantity}</p>
-                <button onclick='addItemToCart(${meti})'>+</button>
-            </li>`
+            str += stringMe(item)
         })
         str += `</ul></div>`;
         newDiv.innerHTML = str;
@@ -54,13 +48,7 @@ function printItem(cat,items) {
         const meti = JSON.stringify(items)
 
         if (exists == null) {
-            str += `
-            <li id="${items.name}">
-                <p id="price">$${items.price}</p>
-                <p id="name" >${items.name}</p>
-                <p id="quantity">${items.quantity}</p>
-                <button onclick='addItemToCart(${meti})'>+</button>
-            </li>`
+            str += stringMe(items)
             str += `</ul></div>`;
             newDiv.innerHTML = str;
             main.append(newDiv);
@@ -69,13 +57,7 @@ function printItem(cat,items) {
             try {
                 if (parent.getAttribute('id') != items.name) {
                     var node = document.createElement('ul')
-                    node.innerHTML = `
-                    <li id="${items.name}">
-                        <p id="price">$${items.price}</p>
-                        <p id="name" >${items.name}</p>
-                        <p id="quantity">${items.quantity}</p>
-                        <button onclick='addItemToCart(${meti})'>+</button>
-                    </li>`
+                    node.innerHTML = stringMe(items)
                     exists.parentElement.appendChild(node)
                 } else {
                     var quantity = parent.children[2].innerHTML
@@ -84,18 +66,23 @@ function printItem(cat,items) {
                 }
             } catch (e) {
                 var node = document.createElement('ul')
-                    node.innerHTML = `
-                    <li id="${items.name}">
-                        <p id="price">$${items.price}</p>
-                        <p id="name" >${items.name}</p>
-                        <p id="quantity">${items.quantity}</p>
-                        <button onclick='addItemToCart(${meti})'>+</button>
-                    </li>`
-                    exists.parentElement.appendChild(node)
+                node.innerHTML = stringMe(items)
+                exists.parentElement.appendChild(node)
             }
         }
     }
 };
+
+function stringMe(item) {
+    const meti = JSON.stringify(item)
+    return (`
+    <li id="${item.name}">
+        <p id="price">$${item.price}</p>
+        <p id="name" >${item.name}</p>
+        <p id="quantity">${item.quantity}</p>
+        <button onclick='addItemToCart(${meti})'>+</button>
+    </li>`)
+}
 
 function addItemToCart(item) {
     const meti = JSON.stringify(item)
@@ -119,7 +106,6 @@ function addItemToCart(item) {
         newDiv.innerHTML = str
         cart.append(newDiv)
     }
-
     cartAddItem(item)
 }
 
