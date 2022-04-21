@@ -1,36 +1,42 @@
 {
     "Fruit": [
         {
+            "id": 1,
             "name": "Apples",
             "price": 2.3,
             "quantity": 10
         },
         {
+            "id": 2,
             "name": "Bananas",
             "price": 5.0,
             "quantity": 7
         },
         {
+            "id": 3,
             "name": "Pears",
             "price": 3.6,
-            "quantity": 5
+            "quantity": 1
         }
     ],
     "Drinks": [
         {
+            "id": 4,
             "name": "Coffee",
             "price": 2.7,
-            "quantity": 100
+            "quantity": 7
         },
         {
+            "id": 5,
             "name": "Tea",
             "price": 2.0,
-            "quantity": 67
+            "quantity": 13
         },
         {
+            "id": 6,
             "name": "Water",
             "price": 1.7,
-            "quantity": 1980
+            "quantity": 12
         }
     ]
     

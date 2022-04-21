@@ -24,10 +24,6 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.itemList > div:nth-child(1) {
-    border-right: 1px solid black;
-}
-
 ul {
     list-style: none;
     padding-right: 5em;
@@ -38,26 +34,88 @@ ul > li {
     font-weight: bold;
     padding: 10px;
     background-color: rgb(207, 227, 245);
-    border-top: 1px solid
+    border-top: 1px solid;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+ul > li > p:nth-child(1) {
+    grid-column: span 1;
+}
+
+ul > li > p:nth-child(2) {
+    grid-column: span 1;
+}
+
+ul > li > p:nth-child(3) {
+    grid-column: span 1;
+    text-align: right;
+    padding-right: 30px;
 }
 
 button {
     float: right;
     margin-right: 5px;
     border: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
 }
 
 button:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
 }
 
-.cart {
+#cart {
+    text-align: center;
+    font-weight: bold;
     grid-column: 4 / 10;
     padding: 20px;
-    background-color: lightgray;
+    background-color: rgb(222, 243, 247);
+    
 }
 
-.cart > div {
-    background-color: green;
+#cart > section {
+    display: grid;
+    align-items: center;
+    /* justify-items: center; */
+    grid-template-columns: repeat(2, 1fr)
+}
+
+
+
+#cart > div {
+    font-weight: normal;
+    background-color: rgb(211, 230, 233);
     padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#cart > div > p {
+    text-align: left;
+}
+
+#cart > div > p:nth-child(1) {
+    grid-column: span 2;
+    text-align: left;
+}
+
+#cart > div > p:nth-child(2) {
+    grid-column: span 2;
+    text-align: left;
+}
+
+#cart > div > p:nth-child(4) {
+    text-align: right;
+}
+
+#cart > div > button {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+}
+
+#cart > div > p:nth-child(2) {
+    text-align: right;
 }

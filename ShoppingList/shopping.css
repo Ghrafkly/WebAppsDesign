@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#main-heading {
+    text-align: center;
+    background-color: lightcoral;
+    padding: 15px;
+    grid-column: span 12;
+}
+
+.itemList {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+form {
+    grid-column: span 12;
+}

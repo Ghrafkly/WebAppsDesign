@@ -9,8 +9,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="main-heading">Shopping</h1>
+    <h1 id="main-heading">Shopping List</h1>
+    <section id="itemEntry">
+        Enter Item
+        <input type="text" id="itemName" name="itemName" placeholder="Name">
+        <input type="text" id="itemPrice" name="itemPrice" placeholder="Price">
+        <input type="text" id="itemQuantity" name="itemQuantity" placeholder="Quantity">
+        <input type="submit" id="submit" value="Add Item">
+    </section>
     <main class="itemList">
     </main>
+    <section id="cart">
+        <section>
+            <p>LIST</p>
+            <p id="overallCost" 
+            style="background-color: white; 
+            padding-top: 15px; 
+            padding-bottom: 15px;"></p>
+        </section>
+    </section>
 </body>
 </html>
